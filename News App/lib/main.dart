@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/UIScreens/home.dart';
+import '/Screens/home.dart';
 
 void main() {
+   await Firebase.initializeApp();
+ await WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
@@ -10,12 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'News Applicaiton',
-      theme: ThemeData(
-        primaryColor: Colors.black,
-      ),
-      home: Home(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'New App',
+        theme: ThemeData(
+          primaryColor: Colors.Blue,
+        ),
+        home: LoginPage() //Home(),
+        );
   }
 }
